@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table</title>
+    <link rel="stylesheet" type="text/css" href="./table1.css" />
+  </head>
+  <body>
+    <h2>HTML Table</h2>
+    <div class="table-container">
+      <div class="table-button">
+        <div class="button">
+          <button
+            class="button-container"
+            onclick="exportTableToCSV('members.csv');"
+          >
+            Export to csv
+          </button>
+          <button class="button-container">Export all data to csv</button>
+        </div>
+        <div class="search">
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-box"
+              placeholder="Enter text to search"
+            />
+            <button
+              class="button-container"
+              style="margin-right:0px"
+              onclick="clearInputs();"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="table-continer-main">
+        <table class="table-main">
+          <thead>
+            <tr class="table-row">
+              <th class="table-column-header">Company</th>
+              <th class="table-column-header">Contact</th>
+              <th class="table-column-header">Country</th>
+            </tr>
+            <tr>
+              <th class="filter-header">
+                <input
+                  class="text-filter"
+                  type="text"
+                  placeholder="Enter text to search"
+                />
+              </th>
+              <th class="filter-header">
+                <input
+                  class="text-filter"
+                  type="text"
+                  placeholder="Enter text to search"
+                />
+              </th>
+              <th class="filter-header">
+                <input
+                  class="text-filter"
+                  type="text"
+                  placeholder="Enter text to search"
+                />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td class="no-data-text">NO DATA AVAILABLE</td>
+            </tr> -->
+            <tr class="table-row">
+              <td
+                class="table-body-cell"
+                data-title="Hooray!"
+                ondblclick="myFunction(this);"
+                id="table-body-cell1"
+              >
+                Alfreds
+                Futterkisteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+              </td>
+              <td class="table-body-cell">Maria Anders</td>
+              <td class="table-body-cell">Germany</td>
+            </tr>
+            <tr class="table-row">
+              <td
+                class="table-body-cell"
+                data-title="Hooray!"
+                ondblclick="myFunction(this);"
+                id="table-body-cell2"
+              >
+                Alfreds
+                Futterkisteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+              </td>
+              <td class="table-body-cell">Francisco Chang</td>
+              <td class="table-body-cell">Mexico</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Ernst Handel</td>
+              <td class="table-body-cell">Roland Mendel</td>
+              <td class="table-body-cell">Austria</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Island Trading</td>
+              <td class="table-body-cell">Helen Bennett</td>
+              <td class="table-body-cell">UK</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Laughing Bacchus Winecellars</td>
+              <td class="table-body-cell">Yoshi Tannamuri</td>
+              <td class="table-body-cell">Canada</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+            <tr class="table-row">
+              <td class="table-body-cell">Magazzini Alimentari Riuniti</td>
+              <td class="table-body-cell">Giovanni Rovelli</td>
+              <td class="table-body-cell">Italy</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <div class="table-footer-info">
+          <div class="table-length">
+            <label style="color: #666;">Display</label>
+            <select class="table-select">
+              <option value="10">10</option>
+              <option value="10">20</option>
+              <option value="10">50</option>
+              <option value="10">100</option>
+            </select>
+          </div>
+          <div class="table-Info">Showing 1 to 10 of 350 entries</div>
+        </div>
+        <div class="table-pagination">
+          <button class="page-number-moover">&lt;&lt;</button>
+          <button class="page-number-moover">&lt;</button>
+          <button class="page-number-container">3</button>
+          <button class="page-number-container">4</button>
+          <button class="table-footer-selected-page-number">5</button>
+          <button class="page-number-container">6</button>
+          <button class="page-number-container">7</button>
+          <button class="page-number-container">20</button>
+          <button class="page-number-moover">&gt;</button>
+          <button class="page-number-moover">&gt;&gt;</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction(event) {
+        var elem = document.getElementsByClassName('table-body-cell');
+        var currentElem = document.getElementById(event.id);
+        var isCurrElemWrapped = currentElem.style.whiteSpace === 'unset';
+        for (var x = 0; x < elem.length; x++) {
+          elem[x].style.whiteSpace = 'nowrap';
+        }
+        isCurrElemWrapped
+          ? (currentElem.style.whiteSpace = 'nowrap')
+          : (currentElem.style.whiteSpace = 'unset');
+      }
+      function exportTableToCSV(filename) {
+        var csv = [];
+        var rows = document.querySelectorAll('table tr');
+        for (var i = 0; i < rows.length; i++) {
+          var row = [],
+            cols = rows[i].querySelectorAll('td, th');
+          for (var j = 0; j < cols.length; j++) row.push(cols[j].innerText);
+          csv.push(row.join(','));
+        }
+        // Download CSV file
+        downloadCSV(csv.join('\n'), filename);
+      }
+      function downloadCSV(csv, filename) {
+        var csvFile;
+        var downloadLink;
+        // CSV file
+        csvFile = new Blob([csv], { type: 'text/csv' });
+        // Download link
+        downloadLink = document.createElement('a');
+        // File name
+        downloadLink.download = filename;
+        // Create a link to the file
+        downloadLink.href = window.URL.createObjectURL(csvFile);
+        // Hide download link
+        downloadLink.style.display = 'none';
+        // Add the link to DOM
+        document.body.appendChild(downloadLink);
+        // Click download link
+        downloadLink.click();
+      }
+      function clearInputs() {
+        document.getElementsByClassName('search-box')[0].value = '';
+      }
+    </script>
+  </body>
+</html>
